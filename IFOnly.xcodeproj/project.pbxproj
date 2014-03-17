@@ -26,6 +26,7 @@
 		B1D0AEF918D41C9E0041AB95 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AEF818D41C9E0041AB95 /* Recipe.m */; };
 		B1D0AF2018D438F50041AB95 /* TypeOfMealTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AF1F18D438F50041AB95 /* TypeOfMealTableViewCell.m */; };
 		B1D0AF2318D440850041AB95 /* AddRecipeViewControllerPage2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AF2218D440850041AB95 /* AddRecipeViewControllerPage2.m */; };
+		B1D0AF2618D6A7360041AB95 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AF2518D6A7360041AB95 /* RecipeDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		B1D0AF1F18D438F50041AB95 /* TypeOfMealTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeOfMealTableViewCell.m; sourceTree = "<group>"; };
 		B1D0AF2118D440850041AB95 /* AddRecipeViewControllerPage2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeViewControllerPage2.h; sourceTree = "<group>"; };
 		B1D0AF2218D440850041AB95 /* AddRecipeViewControllerPage2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeViewControllerPage2.m; sourceTree = "<group>"; };
+		B1D0AF2418D6A7360041AB95 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		B1D0AF2518D6A7360041AB95 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		DE57CF6AF02F411DA529ABB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 				1815C5C718D19046003EBD6B /* Main.storyboard */,
 				1815C5CA18D19046003EBD6B /* ViewController.h */,
 				1815C5CB18D19046003EBD6B /* ViewController.m */,
+				B1D0AF2418D6A7360041AB95 /* RecipeDetailViewController.h */,
+				B1D0AF2518D6A7360041AB95 /* RecipeDetailViewController.m */,
 				B1D0AEF418D413040041AB95 /* AddRecipeViewControllerPage1.h */,
 				B1D0AEF518D413040041AB95 /* AddRecipeViewControllerPage1.m */,
 				B1D0AF2118D440850041AB95 /* AddRecipeViewControllerPage2.h */,
@@ -311,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1815C5CC18D19046003EBD6B /* ViewController.m in Sources */,
+				B1D0AF2618D6A7360041AB95 /* RecipeDetailViewController.m in Sources */,
 				B1D0AEF918D41C9E0041AB95 /* Recipe.m in Sources */,
 				1815C5C618D19046003EBD6B /* AppDelegate.m in Sources */,
 				B1D0AF2018D438F50041AB95 /* TypeOfMealTableViewCell.m in Sources */,

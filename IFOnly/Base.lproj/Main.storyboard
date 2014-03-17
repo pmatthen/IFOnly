@@ -13,11 +13,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="A" id="jeW-bi-oot">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="A" id="jeW-bi-oot">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jeW-bi-oot" id="hDT-GA-xdW">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -34,10 +34,41 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="9kt-ba-t5e" kind="push" identifier="DetailSegue" id="hpP-MC-7l1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbM-zQ-Hzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576" y="-75"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="KYf-Xq-cw7">
+            <objects>
+                <viewController id="9kt-ba-t5e" customClass="RecipeDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhM-hA-r5P"/>
+                        <viewControllerLayoutGuide type="bottom" id="C4f-4W-Bsc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9TT-hZ-hIO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdK-uc-0zl" customClass="PFImageView">
+                                <rect key="frame" x="85" y="129" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ib5-Fj-2jX"/>
+                    <connections>
+                        <outlet property="recipeImage" destination="zdK-uc-0zl" id="hjZ-eD-57u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dE-i8-DWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="-604"/>
         </scene>
         <!--Add Recipe View Controller Page1 - Create Recipe-->
         <scene sceneID="z2a-0y-azY">
@@ -133,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLF-XZ-6jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="-75"/>
+            <point key="canvasLocation" x="1113" y="408"/>
         </scene>
         <!--Add Recipe View Controller Page2 - Create Recipe-->
         <scene sceneID="tHh-iM-Ke4">
@@ -245,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooE-K4-J7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="-75"/>
+            <point key="canvasLocation" x="1599" y="408"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g2W-nU-hw0">

@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import "Parse/Parse.h"
+#import "RecipeDetailViewController.h"
 
 @interface ViewController ()
+{
+    PFObject *recipe;
+}
 
 @end
 
@@ -61,6 +65,20 @@
     }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    recipe = [self.objects objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"DetailSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        RecipeDetailViewController *myRecipeDetailViewController = segue.destinationViewController;
+        myRecipeDetailViewController.recipe = recipe;
+    }
 }
 
 @end
