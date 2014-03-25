@@ -11,7 +11,6 @@
 @interface RecipeDetailViewController ()
 {
     IBOutlet PFImageView *recipeImage;
-    
 }
 
 @end
@@ -25,7 +24,11 @@
 
     self.navigationItem.title = [recipe objectForKey:@"Name"];
     recipeImage.file = [recipe objectForKey:@"Image"];
+    [recipeImage setContentMode:UIViewContentModeScaleAspectFit];
     [recipeImage loadInBackground];
 }
+
+
+
 
 @end

@@ -76,11 +76,11 @@
     
     for (int i = 0; i < typesOfMeals.count; i++) {
         NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        cell = [tableView cellForRowAtIndexPath:tempIndexPath];
+        cell = (TypeOfMealTableViewCell *) [tableView cellForRowAtIndexPath:tempIndexPath];
         cell.checkMarkLabel.text = @"";
     }
     
-    cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell = (TypeOfMealTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     cell.checkMarkLabel.textColor = [UIColor blueColor];
     cell.checkMarkLabel.text = @"\u2713";
     hasSelectedMealType = YES;

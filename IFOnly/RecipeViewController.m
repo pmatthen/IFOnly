@@ -6,18 +6,19 @@
 //  Copyright (c) 2014 Tablified Solutions. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RecipeViewController.h"
 #import "Parse/Parse.h"
 #import "RecipeDetailViewController.h"
 
-@interface ViewController ()
+@interface RecipeViewController ()
 {
     PFObject *recipe;
+    
 }
 
 @end
 
-@implementation ViewController
+@implementation RecipeViewController
 
 - (void)viewDidLoad
 {

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #include "Parse/Parse.h"
 
-@interface ViewController : PFQueryTableViewController
+@interface RecipeViewController : PFQueryTableViewController
 
 @end

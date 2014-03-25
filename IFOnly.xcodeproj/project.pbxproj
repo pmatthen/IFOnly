@@ -14,7 +14,7 @@
 		1815C5C218D19046003EBD6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5C118D19046003EBD6B /* main.m */; };
 		1815C5C618D19046003EBD6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5C518D19046003EBD6B /* AppDelegate.m */; };
 		1815C5C918D19046003EBD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815C5C718D19046003EBD6B /* Main.storyboard */; };
-		1815C5CC18D19046003EBD6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5CB18D19046003EBD6B /* ViewController.m */; };
+		1815C5CC18D19046003EBD6B /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5CB18D19046003EBD6B /* RecipeViewController.m */; };
 		1815C5CE18D19046003EBD6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1815C5CD18D19046003EBD6B /* Images.xcassets */; };
 		1815C5D518D19046003EBD6B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1815C5D418D19046003EBD6B /* XCTest.framework */; };
 		1815C5D618D19046003EBD6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1815C5B518D19046003EBD6B /* Foundation.framework */; };
@@ -22,6 +22,9 @@
 		1815C5DF18D19046003EBD6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1815C5DD18D19046003EBD6B /* InfoPlist.strings */; };
 		1815C5E118D19046003EBD6B /* IFOnlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5E018D19046003EBD6B /* IFOnlyTests.m */; };
 		99D56BE25A324864ADC61422 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE57CF6AF02F411DA529ABB0 /* libPods.a */; };
+		B199BFE418D9494500B20257 /* DietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B199BFE318D9494500B20257 /* DietViewController.m */; };
+		B1CF29C118DAC4A000012E2C /* AddMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF29C018DAC4A000012E2C /* AddMealViewController.m */; };
+		B1CF29C418DB470100012E2C /* TypeOfMealTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF29C318DB470100012E2C /* TypeOfMealTableViewCell2.m */; };
 		B1D0AEF618D413040041AB95 /* AddRecipeViewControllerPage1.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AEF518D413040041AB95 /* AddRecipeViewControllerPage1.m */; };
 		B1D0AEF918D41C9E0041AB95 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AEF818D41C9E0041AB95 /* Recipe.m */; };
 		B1D0AF2018D438F50041AB95 /* TypeOfMealTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0AF1F18D438F50041AB95 /* TypeOfMealTableViewCell.m */; };
@@ -51,8 +54,8 @@
 		1815C5C418D19046003EBD6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1815C5C518D19046003EBD6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1815C5C818D19046003EBD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1815C5CA18D19046003EBD6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1815C5CB18D19046003EBD6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1815C5CA18D19046003EBD6B /* RecipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		1815C5CB18D19046003EBD6B /* RecipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		1815C5CD18D19046003EBD6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1815C5D318D19046003EBD6B /* IFOnlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IFOnlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1815C5D418D19046003EBD6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,6 +63,12 @@
 		1815C5DE18D19046003EBD6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1815C5E018D19046003EBD6B /* IFOnlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFOnlyTests.m; sourceTree = "<group>"; };
 		1E24AC55C359403BA0C2EC4A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B199BFE218D9494500B20257 /* DietViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DietViewController.h; sourceTree = "<group>"; };
+		B199BFE318D9494500B20257 /* DietViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DietViewController.m; sourceTree = "<group>"; };
+		B1CF29BF18DAC4A000012E2C /* AddMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMealViewController.h; sourceTree = "<group>"; };
+		B1CF29C018DAC4A000012E2C /* AddMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMealViewController.m; sourceTree = "<group>"; };
+		B1CF29C218DB470100012E2C /* TypeOfMealTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeOfMealTableViewCell2.h; sourceTree = "<group>"; };
+		B1CF29C318DB470100012E2C /* TypeOfMealTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeOfMealTableViewCell2.m; sourceTree = "<group>"; };
 		B1D0AEF418D413040041AB95 /* AddRecipeViewControllerPage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeViewControllerPage1.h; sourceTree = "<group>"; };
 		B1D0AEF518D413040041AB95 /* AddRecipeViewControllerPage1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeViewControllerPage1.m; sourceTree = "<group>"; };
 		B1D0AEF718D41C9E0041AB95 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -136,16 +145,22 @@
 				1815C5C418D19046003EBD6B /* AppDelegate.h */,
 				1815C5C518D19046003EBD6B /* AppDelegate.m */,
 				1815C5C718D19046003EBD6B /* Main.storyboard */,
-				1815C5CA18D19046003EBD6B /* ViewController.h */,
-				1815C5CB18D19046003EBD6B /* ViewController.m */,
+				B199BFE218D9494500B20257 /* DietViewController.h */,
+				B199BFE318D9494500B20257 /* DietViewController.m */,
+				1815C5CA18D19046003EBD6B /* RecipeViewController.h */,
+				1815C5CB18D19046003EBD6B /* RecipeViewController.m */,
 				B1D0AF2418D6A7360041AB95 /* RecipeDetailViewController.h */,
 				B1D0AF2518D6A7360041AB95 /* RecipeDetailViewController.m */,
+				B1CF29BF18DAC4A000012E2C /* AddMealViewController.h */,
+				B1CF29C018DAC4A000012E2C /* AddMealViewController.m */,
 				B1D0AEF418D413040041AB95 /* AddRecipeViewControllerPage1.h */,
 				B1D0AEF518D413040041AB95 /* AddRecipeViewControllerPage1.m */,
 				B1D0AF2118D440850041AB95 /* AddRecipeViewControllerPage2.h */,
 				B1D0AF2218D440850041AB95 /* AddRecipeViewControllerPage2.m */,
 				B1D0AF1E18D438F50041AB95 /* TypeOfMealTableViewCell.h */,
 				B1D0AF1F18D438F50041AB95 /* TypeOfMealTableViewCell.m */,
+				B1CF29C218DB470100012E2C /* TypeOfMealTableViewCell2.h */,
+				B1CF29C318DB470100012E2C /* TypeOfMealTableViewCell2.m */,
 				B1D0AEF718D41C9E0041AB95 /* Recipe.h */,
 				B1D0AEF818D41C9E0041AB95 /* Recipe.m */,
 				1815C5CD18D19046003EBD6B /* Images.xcassets */,
@@ -315,14 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1815C5CC18D19046003EBD6B /* ViewController.m in Sources */,
+				1815C5CC18D19046003EBD6B /* RecipeViewController.m in Sources */,
 				B1D0AF2618D6A7360041AB95 /* RecipeDetailViewController.m in Sources */,
 				B1D0AEF918D41C9E0041AB95 /* Recipe.m in Sources */,
 				1815C5C618D19046003EBD6B /* AppDelegate.m in Sources */,
+				B199BFE418D9494500B20257 /* DietViewController.m in Sources */,
 				B1D0AF2018D438F50041AB95 /* TypeOfMealTableViewCell.m in Sources */,
 				1815C5C218D19046003EBD6B /* main.m in Sources */,
 				B1D0AF2318D440850041AB95 /* AddRecipeViewControllerPage2.m in Sources */,
+				B1CF29C418DB470100012E2C /* TypeOfMealTableViewCell2.m in Sources */,
 				B1D0AEF618D413040041AB95 /* AddRecipeViewControllerPage1.m in Sources */,
+				B1CF29C118DAC4A000012E2C /* AddMealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

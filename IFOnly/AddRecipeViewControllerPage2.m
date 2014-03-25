@@ -43,18 +43,10 @@
         PFFile *file = [PFFile fileWithData:recipe.image];
         [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [createdRecipe setObject:file forKey:@"Image"];
-            [createdRecipe saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                
-            }];
-            
+            [createdRecipe saveInBackground];
         }];
         
     }
-
-
-    
-//    createdRecipe[@"Name"] = recipe.name;
-//    [createdRecipe saveInBackground];
 }
 
 
