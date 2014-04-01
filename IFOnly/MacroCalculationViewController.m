@@ -4,46 +4,70 @@
 //
 //  Created by gule on 2014-03-28.
 //  Copyright (c) 2014 Tablified Solutions. All rights reserved.
+
+
+//RMR for men = 66 + (6.23 x weight in pounds) + (12.7 x height in inches) – (6.8 x age)
 //
+//RMR for women = 655 + (4.35 x weight in pounds) + (4.7 x height in inches) – (4.7 x age).
 
 #import "MacroCalculationViewController.h"
 
-@interface MacroCalculationViewController ()
+@interface MacroCalculationViewController () <UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *ageTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *lbsTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *heightTextLabel;
+@property (strong, nonatomic) IBOutlet UIPickerView *genderPicker;
+
+@property (strong, nonatomic) IBOutlet UILabel *rmrTotal;
+@property (strong, nonatomic) IBOutlet UILabel *totalCalLabel;
+
+@property (nonatomic) int age;
+@property (nonatomic) int weight;
+@property (nonatomic) int height;
+@property (nonatomic) int rmr;
+
+
 
 @end
 
 @implementation MacroCalculationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning
+}
+- (IBAction)onCalculateButtonePressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    double lbs = (4.35 * self.lbsTextLabel.text.intValue);
+    double ht = (4.7 * self.heightTextLabel.text.intValue);
+    double a = (4.7 * _ageTextLabel.text.intValue);
+    
+    self.totalCalLabel.text = @(655 + lbs + ht  - a).description;
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(int)addNumber:(int)number toNumber:(int)otherNumber
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+
+    NSString *ageString = self.ageTextLabel.text;
+    _age = [ageString intValue];
+    
+    self.rmr = _age;
+    
+    NSLog(@"labe is: %d and text input is %@", self.rmr, self.ageTextLabel.text);
+    
+    return  number + otherNumber;
 }
-*/
+- (void)viewDidUnload {
+    
+    [super viewDidUnload];
+
+}
+
 
 @end

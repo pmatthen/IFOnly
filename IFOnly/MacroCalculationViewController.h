@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MacroCalculationViewController : UIViewController
+-(int)addNumber:(int)number toNumber:(int)otherNumber;
+
 
 @end

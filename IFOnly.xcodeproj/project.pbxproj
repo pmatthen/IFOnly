@@ -22,6 +22,7 @@
 		1815C5DF18D19046003EBD6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1815C5DD18D19046003EBD6B /* InfoPlist.strings */; };
 		1815C5E118D19046003EBD6B /* IFOnlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815C5E018D19046003EBD6B /* IFOnlyTests.m */; };
 		99D56BE25A324864ADC61422 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE57CF6AF02F411DA529ABB0 /* libPods.a */; };
+		AAE9E78818E5B53C000BF936 /* MacroCalculationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE9E78718E5B53C000BF936 /* MacroCalculationViewController.m */; };
 		B199BFE418D9494500B20257 /* DietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B199BFE318D9494500B20257 /* DietViewController.m */; };
 		B1CF29C118DAC4A000012E2C /* AddMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF29C018DAC4A000012E2C /* AddMealViewController.m */; };
 		B1CF29C418DB470100012E2C /* TypeOfMealTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF29C318DB470100012E2C /* TypeOfMealTableViewCell2.m */; };
@@ -63,6 +64,8 @@
 		1815C5DE18D19046003EBD6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1815C5E018D19046003EBD6B /* IFOnlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFOnlyTests.m; sourceTree = "<group>"; };
 		1E24AC55C359403BA0C2EC4A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AAE9E78618E5B53C000BF936 /* MacroCalculationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroCalculationViewController.h; sourceTree = "<group>"; };
+		AAE9E78718E5B53C000BF936 /* MacroCalculationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacroCalculationViewController.m; sourceTree = "<group>"; };
 		B199BFE218D9494500B20257 /* DietViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DietViewController.h; sourceTree = "<group>"; };
 		B199BFE318D9494500B20257 /* DietViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DietViewController.m; sourceTree = "<group>"; };
 		B1CF29BF18DAC4A000012E2C /* AddMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMealViewController.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				1815C5C418D19046003EBD6B /* AppDelegate.h */,
 				1815C5C518D19046003EBD6B /* AppDelegate.m */,
 				1815C5C718D19046003EBD6B /* Main.storyboard */,
+				AAE9E78618E5B53C000BF936 /* MacroCalculationViewController.h */,
+				AAE9E78718E5B53C000BF936 /* MacroCalculationViewController.m */,
 				B199BFE218D9494500B20257 /* DietViewController.h */,
 				B199BFE318D9494500B20257 /* DietViewController.m */,
 				1815C5CA18D19046003EBD6B /* RecipeViewController.h */,
@@ -336,6 +341,7 @@
 				1815C5C618D19046003EBD6B /* AppDelegate.m in Sources */,
 				B199BFE418D9494500B20257 /* DietViewController.m in Sources */,
 				B1D0AF2018D438F50041AB95 /* TypeOfMealTableViewCell.m in Sources */,
+				AAE9E78818E5B53C000BF936 /* MacroCalculationViewController.m in Sources */,
 				1815C5C218D19046003EBD6B /* main.m in Sources */,
 				B1D0AF2318D440850041AB95 /* AddRecipeViewControllerPage2.m in Sources */,
 				B1CF29C418DB470100012E2C /* TypeOfMealTableViewCell2.m in Sources */,
