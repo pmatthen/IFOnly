@@ -9,6 +9,9 @@
 #import "DietViewController.h"
 
 @interface DietViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+{
+    NSMutableArray *dietEventArray;
+}
 
 @end
 
@@ -17,7 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -30,6 +32,41 @@
         login.signUpController.delegate = self;
         [self presentViewController:login animated:animated completion:nil];
     }
+        
+    PFQuery *query = [PFQuery queryWithClassName:@"dietEvent"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *dietEvents, NSError *error) {
+        dietEventArray = [[NSMutableArray alloc] initWithArray:dietEvents];
+        
+        for (int i = 0; i < dietEventArray.count; i++) {
+            if (dietEventArray[i][@"mealDate"] < [NSDate date]) {
+                [dietEventArray removeObjectAtIndex:i];
+                NSLog(@"Removed object at %i", i);
+            }
+        }
+        
+        dietEventArray = [dietEventArray sortedArrayUsingComparator:^NSComparisonResult(PFObject *obj1, PFObject *obj2) {
+            
+            NSDate *date1 = obj1[@"mealDate"];
+            NSDate *date2 = obj2[@"mealDate"];
+            
+            return [date1 compare:date2];
+        }];
+        
+        dispatch_semaphore_t semaphor = dispatch_semaphore_create(0);
+        int i = 0;
+        while ( (i < 3) && (i < dietEventArray.count)) {
+            PFObject *dietEvent = dietEventArray[i];
+            PFRelation *relation = [dietEvent relationForKey:@"recipe"];
+            PFQuery *query = [relation query];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                dispatch_semaphore_signal(semaphor);
+                PFObject *recipe = [objects firstObject];
+                NSLog(@"%i. On %@, %@ is being served for %@", i, dietEventArray[i][@"mealDate"], recipe[@"Name"], dietEventArray[i][@"typeOfMeal"]);
+            }];
+            i++;
+            dispatch_semaphore_wait(semaphor, DISPATCH_TIME_FOREVER);
+        }
+    }];
 }
 
 -(void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
@@ -49,8 +86,5 @@
     login.signUpController.delegate = self;
     [self presentViewController:login animated:YES completion:nil];
 }
-
-
-
 
 @end

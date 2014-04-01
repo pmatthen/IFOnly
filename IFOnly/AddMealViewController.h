@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipe.h"
+#import <Parse/Parse.h>
 
 @interface AddMealViewController : UIViewController
+
+@property PFObject *recipe;
 
 @end

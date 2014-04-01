@@ -347,7 +347,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vY6-Ns-r7W" kind="push" id="Oiy-6q-hTA"/>
+                                    <segue destination="vY6-Ns-r7W" kind="push" identifier="AddDietEventSegue" id="Oiy-6q-hTA"/>
                                 </connections>
                             </button>
                         </subviews>
