@@ -16,12 +16,13 @@
     IBOutlet UITableView *myTableView;
     NSArray *typesOfMeals;
     BOOL hasSelectedMealType;
-    int selectedMeal;
+    NSNumber *selectedMeal;
 }
 
 @end
 
 @implementation AddMealViewController
+@synthesize recipe;
 
 - (void)viewDidLoad
 {
@@ -33,14 +34,25 @@
 }
 
 - (IBAction)onSaveButtonPressed:(id)sender {
-    if ([[myDatePicker date] timeIntervalSinceReferenceDate] <= [[NSDate date] timeIntervalSinceReferenceDate]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"User must choose a future date" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    if ([[myDatePicker date] timeIntervalSinceReferenceDate] < [[NSDate date] timeIntervalSinceReferenceDate]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"User cannot choose a date that has passed" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     } else if (hasSelectedMealType == NO) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"User must select a meal type" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     } else {
-        // save date to Parse
+        PFObject *dietEvent = [PFObject objectWithClassName:@"dietEvent"];
+        PFUser *user = [PFUser currentUser];
+        
+        PFRelation *relation = [dietEvent relationForKey:@"recipe"];
+        [relation addObject:recipe];
+        
+        relation = [dietEvent relationForKey:@"user"];
+        [relation addObject:user];
+        
+        dietEvent[@"mealDate"] = [myDatePicker date];
+        dietEvent[@"typeOfMeal"] = selectedMeal;
+        [dietEvent saveInBackground];
     }
 }
 
@@ -71,7 +83,7 @@
     cell.checkMarkLabel.textColor = [UIColor blueColor];
     cell.checkMarkLabel.text = @"\u2713";
     hasSelectedMealType = YES;
-    selectedMeal = indexPath.row;
+    selectedMeal = @(indexPath.row);
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RecipeDetailViewController.h"
+#import "AddMealViewController.h"
 
 @interface RecipeDetailViewController ()
 {
@@ -28,7 +29,12 @@
     [recipeImage loadInBackground];
 }
 
-
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddDietEventSegue"]) {
+        AddMealViewController *addMealVC = segue.destinationViewController;
+        addMealVC.recipe = recipe;
+    }
+}
 
 @end
